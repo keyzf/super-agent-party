@@ -3757,10 +3757,10 @@ body {
   position: absolute;
   top: 50%;
   width: 24px;
-  height: 24px;
-  border-radius: 50%;
+  height: 60px;
+  border-radius: 12px;
   background: var(--el-color-primary);
-  color: white;
+  color: var(--el-bg-color-page);
   display: flex;
   align-items: center;
   justify-content: center;
