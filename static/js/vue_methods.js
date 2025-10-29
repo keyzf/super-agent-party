@@ -9256,7 +9256,7 @@ clearSegments() {
           const data = await res.json();
           throw new Error(data.detail || '上传失败');
         }
-        showNotification('本地 ZIP 安装成功');
+        showNotification(this.t('waitExtensionInstall'));
         this.showExtensionForm = false;
         this.scanExtensions(); // 刷新
       } catch (err) {
@@ -9300,7 +9300,7 @@ clearSegments() {
         });
         if (res.status === 409) throw new Error('插件已存在');
         if (!res.ok) throw new Error('安装失败');
-        showNotification('安装成功', 'success');
+        showNotification(this.t('waitExtensionInstall'), 'success');
         plugin.installed = true;
         // 3 秒后自动刷新
         setTimeout(() => this.scanExtensions(), 3000);
