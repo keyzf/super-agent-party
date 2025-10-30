@@ -1635,7 +1635,6 @@ let vue_methods = {
                   
                   // 追加内容到高亮块
                   lastMessage.content += newContent;
-                  lastMessage.briefly = false;
                   
                   this.scrollToBottom();
                 }
@@ -1650,7 +1649,6 @@ let vue_methods = {
                     this.fileLinks.push(parsed.choices[0].delta.tool_link);
                   }
                   lastMessage.content += parsed.choices[0].delta.tool_content + '\n\n';
-                  lastMessage.briefly = false;
                   this.scrollToBottom();
                 }
                 // 处理 content 逻辑
